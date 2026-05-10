@@ -1,0 +1,1 @@
+# 4 técnicas: ZS, FS, CoT, Role

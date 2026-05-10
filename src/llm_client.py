@@ -1,0 +1,1 @@
+# Conexão com Ollama API

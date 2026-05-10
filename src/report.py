@@ -1,0 +1,1 @@
+# Gerar tabelas e gráficos comparativos
