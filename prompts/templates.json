@@ -1,0 +1,22 @@
+{
+    "classificacao_urgencia": {
+        "zero_shot": "Classifique a urgência do caso médico descrito. Responda APENAS com: EMERGÊNCIA, URGENTE, POUCO URGENTE ou NÃO URGENTE.",
+        "few_shot": "Classifique a urgência seguindo os exemplos abaixo. Responda APENAS com a classificação.",
+        "cot": "Analise o caso médico passo a passo antes de classificar a urgência.",
+        "role": "Como especialista em triagem, classifique a urgência do caso descrito."
+    },
+
+    "extracao_dados_paciente": {
+        "zero_shot": "Extraia os dados clínicos do relato e retorne APENAS um JSON com: sintoma, duracao, intensidade.",
+        "few_shot": "Extraia os dados clínicos seguindo o formato dos exemplos. Retorne APENAS o JSON.",
+        "cot": "Analise o relato passo a passo e extraia os dados clínicos em formato JSON.",
+        "role": "Como enfermeiro de triagem, extraia os dados clínicos do relato em formato JSON."
+    },
+
+    "sumarizacao_prontuario": {
+        "zero_shot": "Resuma o prontuário em bullet points objetivos para o médico plantonista. Máximo 5 linhas.",
+        "few_shot": "Resuma o prontuário seguindo o formato dos exemplos. Máximo 5 bullet points.",
+        "cot": "Analise o prontuário passo a passo e resuma os pontos mais críticos em bullet points.",
+        "role": "Como médico emergencista, resuma os pontos críticos do prontuário para o plantonista."
+    }
+}
