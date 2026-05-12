@@ -1,0 +1,19 @@
+{
+    "classificacao_urgencia": [
+        {"input": "Paciente inconsciente no pronto-socorro", "output": "EMERGÊNCIA"},
+        {"input": "Adulto com febre de 38 graus há 1 dia", "output": "URGENTE"},
+        {"input": "Paciente com dor de cabeça leve ocasional", "output": "POUCO URGENTE"},
+        {"input": "Paciente quer resultado de exame de rotina", "output": "NÃO URGENTE"}
+    ],
+
+    "extracao_dados_paciente": [
+        {"input": "Dor de cabeça forte há 3 dias", "output": "{\"sintoma\": \"dor de cabeça\", \"duracao\": \"3 dias\", \"intensidade\": \"forte\"}"},
+        {"input": "Febre baixa desde ontem", "output": "{\"sintoma\": \"febre\", \"duracao\": \"1 dia\", \"intensidade\": \"baixa\"}"},
+        {"input": "Cansaço moderado há uma semana", "output": "{\"sintoma\": \"cansaço\", \"duracao\": \"1 semana\", \"intensidade\": \"moderado\"}"}
+    ],
+
+    "sumarizacao_prontuario": [
+        {"input": "Paciente João, 45 anos, hipertenso, dor torácica há 2h, PA 180/110", "output": "• Homem, 45 anos, hipertenso\n• Dor torácica há 2h\n• PA elevada: 180/110\n• Avaliar síndrome coronariana"},
+        {"input": "Paciente Sofia, 30 anos, grávida 20 semanas, enjoo e tontura leve", "output": "• Mulher, 30 anos, grávida 20 semanas\n• Enjoo e tontura leve\n• Sem sinais de gravidade\n• Monitorar pressão e hidratação"}
+    ]
+}
