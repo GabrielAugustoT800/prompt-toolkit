@@ -1,0 +1,25 @@
+{
+    "classificação_urgência":[
+        {"input": "Paciente com dor no peito irradiando para o braço esquerdo e suor frio", "esperado": "EMERGÊNCIA"},
+        {"input": "Criança de 5 anos com febre de 39 graus há 1 dia e vômitos", "esperado": "URGENTE"},
+        {"input": "Adulto com dor lombar leve há uma semana sem outros sintomas", "esperado": "POUCO URGENTE"},
+        {"input": "Paciente solicita renovação de receita de medicamento controlado", "esperado": "NÃO URGENTE"},
+        {"input": "Idoso de 70 anos com confusão mental e queda súbita", "esperado": "EMERGÊNCIA"}
+    ],
+
+    "extracao_dados_paciente": [
+        {"input": "Dor abdominal intensa há 2 dias", "esperado": {"sintoma": "dor abdominal", "duracao": "2 dias", "intensidade": "intensa"}},
+        {"input": "Tontura leve desde esta manhã", "esperado": {"sintoma": "tontura", "duracao": "algumas horas", "intensidade": "leve"}},
+        {"input": "Falta de ar moderada há 3 horas", "esperado": {"sintoma": "falta de ar", "duracao": "3 horas", "intensidade": "moderada"}},
+        {"input": "Dor de garganta forte há 4 dias com dificuldade para engolir", "esperado": {"sintoma": "dor de garganta", "duracao": "4 dias", "intensidade": "forte"}},
+        {"input": "Náusea fraca após o almoço", "esperado": {"sintoma": "náusea", "duracao": "algumas horas", "intensidade": "fraca"}}
+    ],
+
+    "sumarizacao_prontuario": [
+        {"input": "Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90", "esperado": "Hiperglicemia em diabética idosa"},
+        {"input": "Paciente Pedro, 8 anos, asmático, chegou com chiado no peito e dificuldade respiratória há 30min, SpO2 91%", "esperado": "Crise asmática grave em criança"},
+        {"input": "Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal", "esperado": "Emergência obstétrica"},
+        {"input": "Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h", "esperado": "Suspeita de AVC"},
+        {"input": "Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada", "esperado": "Reação alérgica grave"}
+    ]
+}
