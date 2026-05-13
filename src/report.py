@@ -28,6 +28,22 @@ def grafico_acuracia(resultados):
     plt.close()
     print('Gráfico de acurácia salvo com sucesso!')
 
+def grafico_custo(resultados):
+    df = pd.DataFrame(resultados)
+    os.makedirs('output/graficos', exist_ok = True)
+
+    grupo = df.groupby(['Tarefa', 'Tecnica'])['tokens_total'].mean().unstack()
+    grupo.plot(kind='bar', figsize=(10, 5))
+    plt.title('Custo em Tokens por Tarefa e Técnica')
+    plt.xlabel('Tarefa')
+    plt.ylabel('Tokens Médios')
+    plt.xticks(rotation = 45)
+    plt.legend(title = 'Técnica')
+    plt.tight_layout()
+    plt.savefig("output/graficos/custo_tokens.png")
+    plt.close()
+    print('Gráfico de custo slavo com sucesso!')
+
 def grafico_temperatura(resultados_temp):
     os.makedirs('output/graficos', exist_ok=True)
 
