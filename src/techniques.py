@@ -18,10 +18,18 @@ def few_shot(tarefa, input, exemplo):
     )
     return adcionar_exemplos(prompt, exemplo)
 
-def chain_of_thought(tarefa, input, persona):
+def chain_of_thought(tarefa, input, passos):
     prompt = montar_prompts(
         instrucao = tarefa['instrucao'],
         input_dados = input,
         formato_output = tarefa['formato_output']
+    )
+    return adcionar_cot(prompt, passos)
+
+def role_prompting(persona, tarefa, input):
+    prompt = montar_prompts(
+        instrucao = tarefa['instrucao'],
+        input_dados = input,
+        formato_output = tarefa['formato_output'] 
     )
     return prompt, persona
