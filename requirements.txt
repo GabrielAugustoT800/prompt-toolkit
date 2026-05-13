@@ -1,1 +1,7 @@
 # Dependências do projeto
+
+requests
+python-dotenv
+tiktoken
+pandas
+matplotlib
