@@ -1,6 +1,6 @@
 # Tarefas do domínio
 tarefas ={
-    'classificação_urgencia': {
+    'classificacao_urgencia': {
         'nome': 'classificacao_urgencia',
         'tipo': 'classificacao',
         'instrucao': 'Classifique a urgência do caso médico como EMERGÊNCIA, URGENTE, POUCO URGENTE, NÃO URGENTE',
@@ -19,6 +19,25 @@ tarefas ={
         'persona': 'medico_triagem'
     },
 
+    "extracao_dados_paciente": {
+        "nome": "extracao_dados_paciente",
+        "tipo": "extracao",
+        "instrucao": "Extraia os dados estruturados do relato médico em formato JSON",
+        "formato_output": "Responda APENAS com o JSON: {sintoma, duracao, intensidade}",
+        "exemplos_fewshot": [
+            {"input": "Dor de cabeça forte há 3 dias", "output": '{"sintoma": "dor de cabeça", "duracao": "3 dias", "intensidade": "forte"}'},
+            {"input": "Febre baixa desde ontem", "output": '{"sintoma": "febre", "duracao": "1 dia", "intensidade": "baixa"}'},
+        ],
+        "passos_cot": [
+            "Identifique o sintoma principal",
+            "Identifique a duração mencionada",
+            "Identifique a intensidade descrita",
+            "Monte o JSON com os dados extraídos",
+        ],
+        "persona": "enfermeiro_triagem"
+    },
+
+    
     'sumarizacao_prontuario': {
         'nome': 'sumarizacao_prontuario',
         'tipo': 'sumarizacao',

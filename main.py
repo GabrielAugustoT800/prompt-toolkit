@@ -1,27 +1,27 @@
 # Ponto de entrada
 import json
-from src.llm_client import LLm_Client
+from src.llm_client import LLMClient
 from src.techniques import zero_shot, few_shot, chain_of_thought, role_prompting
 from src.tasks import tarefas
 from src.evaluator import contar_tokens, medir_acuracia, testar_temperatura
 from src.report import gerar_tabela, grafico_acuracia, grafico_custo, grafico_temperatura, recomendar
 
 def carregar_json(path):
-    with open(path, 'r', encoding= 'utf=8') as f:
+    with open(path, 'r', encoding= 'utf-8') as f:
         return json.load(f)
     
 def main():
     print('='*40, 'Iniciando Prompt-TOOLKIT - Domínio: Saúde','='*40,'\n')
 
-    llm = LLm_Client()
+    llm = LLMClient()
     inputs = carregar_json('data/inputs.json')
     examples = carregar_json('data/examples.json')
-    system_prompts = carregar_json('prompts/system_prompst.json')
+    system_prompts = carregar_json('prompts/system_prompts.json')
     resultados = []
 
     for nome_tarefa, tarefa in tarefas.items():
         print(f'\nTarefa: {nome_tarefa}')
-        casos = input[nome_tarefa]
+        casos = inputs[nome_tarefa]
         exemplos = examples[nome_tarefa]
         persona = system_prompts[tarefa['persona']]['instrucao']
 
@@ -50,7 +50,7 @@ def main():
                     continue
 
                 acuracia = medir_acuracia(resultado['resposta'], esperado)
-                tokens_total = resultado['tokens_prompt'] + resultado['token_resposta']
+                tokens_total = resultado['tokens_prompt'] + resultado['tokens_resposta']
 
                 print(f'Acurácia: {acuracia:.0%}')
 
@@ -63,7 +63,7 @@ def main():
                     'acuracia': acuracia,
                     'tokens_total': tokens_total,
                     'tokens_prompt_tiktoken': tokens_prompt,
-                    'tempo.ms': resultado['tempo.ms']
+                    'tempo_ms': resultado['tempo_ms']
                 })
     
     print('\n Gerando Relatório...')
@@ -72,7 +72,7 @@ def main():
     grafico_custo(resultados)
     
     print('\nTestando a temperatura do Melhor Prompt...')
-    melhor_prompt = zero_shot(list(tarefas.values()))[0], list(inputs.values())[0][0]['input']
+    melhor_prompt = zero_shot(list(tarefas.values())[0], list(inputs.values())[0][0]['input'])
     resultados_temp = testar_temperatura(melhor_prompt, [0.1, 0.5, 1.0], llm)
     grafico_temperatura(resultados_temp)
 

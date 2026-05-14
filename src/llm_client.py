@@ -1,50 +1,44 @@
 # Conexão com Ollama API
-import requests
-import time
 import os
+from ollama import Client
 from dotenv import load_dotenv
+import time
+from src.evaluator import contar_tokens
 
 load_dotenv()
 
-class LLm_Client:
-    def __init__(self):
-        self.host = os.getenv('OLLAMA_HOST', 'http://localhost:11434')
-        self.model = os.getenv('OLLAMA_MODEL', 'gpt-oss:120b')
-    
-    def chat(self, prompt, system='', temp=0.7, max_token=1000):
-        url = f'{self.host}/api/chat'
+client = Client(
+    host='https://ollama.com',
+    headers={'Authorization': 'Bearer ' + os.getenv('OLLAMA_API_KEY')}
+)
 
+class LLMClient:
+    def __init__(self):
+        self.model = 'gpt-oss:120b'
+
+    def chat(self, prompt, system='', temp = 0.3, max_tokens = 500):
         messages = []
         if system:
             messages.append({'role': 'system', 'content': system})
         messages.append({'role': 'user', 'content': prompt})
 
-        payload = {
-            'model': self.model,
-            'messages': messages,
-            'temperature': temp,
-            'max_tokens': max_token,
-            'stream': False
-        }
-
         try:
             inicio = time.time()
-            response = requests.post(url, json=payload, timeout=120)
+            resultado = client.chat(
+                model= self.model,
+                messages= messages,
+                options= {'num_predict': max_tokens, 'temperature': temp},
+                stream= False
+            )
+            resposta = resultado.message.content.strip()
             tempo_ms = int((time.time() - inicio) * 1000)
 
-            data = response.json()
-
-            return{
-                'resposta': data['message']['content'],
-                'tokens_prompt': data.get('promp_eval_count', 0),
-                'tokens_resposta': data.get('eval_count', 0),
+            return {
+                'resposta': resposta,
+                'tokens_prompt': contar_tokens(prompt),
+                'tokens_resposta': contar_tokens(resposta),
                 'tempo_ms': tempo_ms
             }
-        
-        except requests.exceptions.Timeout:
-            print('erro: Timeout - requisição do modelo demorou mais que 120s')
-        except requests.exceptions.ConnectionError:
-            print('erro: Ollama não está rodando - inicie com "ollama serve"')
         except Exception as e:
             print(f'Erro: {e}')
             return{'erro': str(e)}

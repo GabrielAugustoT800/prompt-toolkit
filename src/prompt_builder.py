@@ -18,7 +18,7 @@ def montar_prompts(instrucao, contexto='', input_dados='', formato_output=''):
 
     return '\n\n'.join(partes)
 
-def adcionar_exemplos(prompt,exemplos):
+def adicionar_exemplos(prompt,exemplos):
     if not exemplos:
         return prompt
     
@@ -28,7 +28,7 @@ def adcionar_exemplos(prompt,exemplos):
 
     return prompt + '\n'.join(linhas)
 
-def adcionar_cot(prompt, passos):
+def adicionar_cot(prompt, passos):
     if not passos:
         return prompt
     linhas = ['\n\nAnálise passo a passo']

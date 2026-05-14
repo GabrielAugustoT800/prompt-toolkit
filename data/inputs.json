@@ -1,5 +1,5 @@
 {
-    "classificação_urgência":[
+    "classificacao_urgencia":[
         {"input": "Paciente com dor no peito irradiando para o braço esquerdo e suor frio", "esperado": "EMERGÊNCIA"},
         {"input": "Criança de 5 anos com febre de 39 graus há 1 dia e vômitos", "esperado": "URGENTE"},
         {"input": "Adulto com dor lombar leve há uma semana sem outros sintomas", "esperado": "POUCO URGENTE"},

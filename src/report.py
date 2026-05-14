@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-def gerar_tabelas(resultados):
+def gerar_tabela(resultados):
     df = pd.DataFrame(resultados)
     os.makedirs('output', exist_ok = True)
     df.to_csv('output/resultados.csv', index = False)
@@ -16,7 +16,7 @@ def grafico_acuracia(resultados):
     df = pd.DataFrame(resultados)
     os.makedirs('output/graficos', exist_ok = True)
 
-    grupo = df.groupby(['Tarefa', 'Tecnica'])['Acuracia'].mean().unstack()
+    grupo = df.groupby(['tarefa', 'tecnica'])['acuracia'].mean().unstack()
     grupo.plot(kind='bar', figsize = (10, 5))
     plt.title('Acurácia Por Tarefa e Técnica')
     plt.xlabel('Tarefa')
@@ -32,7 +32,7 @@ def grafico_custo(resultados):
     df = pd.DataFrame(resultados)
     os.makedirs('output/graficos', exist_ok = True)
 
-    grupo = df.groupby(['Tarefa', 'Tecnica'])['tokens_total'].mean().unstack()
+    grupo = df.groupby(['tarefa', 'tecnica'])['tokens_total'].mean().unstack()
     grupo.plot(kind='bar', figsize=(10, 5))
     plt.title('Custo em Tokens por Tarefa e Técnica')
     plt.xlabel('Tarefa')
@@ -66,6 +66,6 @@ def recomendar(resultados):
 
     for tarefa in df['tarefa'].unique():
         df_tarefa = df[df['tarefa'] == tarefa]
-        melhor = df_tarefa.groupby('Tecnica')['Acuracia'].mean().idmax()
-        acuracia = df_tarefa.goupyby('Tecnica')["Acuracia"].mean().max()
+        melhor = df_tarefa.groupby('tecnica')['acuracia'].mean().idxmax()
+        acuracia = df_tarefa.groupby('tecnica')["acuracia"].mean().max()
         print(f' {tarefa}: Melhor técnica -> {melhor} (Acurácia média: {acuracia:.0%})')
