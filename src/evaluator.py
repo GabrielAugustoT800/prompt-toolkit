@@ -54,5 +54,5 @@ def testar_temperatura(prompt, temps, llm_client, system=''):
             'consistencia': consistencia,
             'respostas': respostas
         })
-        return resultados
+    return resultados
 

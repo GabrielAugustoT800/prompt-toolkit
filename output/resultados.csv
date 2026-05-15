@@ -1,189 +1,181 @@
 tarefa,tecnica,input,resposta,esperado,acuracia,tokens_total,tokens_prompt_tiktoken,tempo_ms
-classificacao_urgencia,zero_shot,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,84,77,1603
-classificacao_urgencia,few_shot,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,190,183,1010
-classificacao_urgencia,chain_of_thought,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,142,135,1023
-classificacao_urgencia,role_prompting,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,84,77,2047
-classificacao_urgencia,zero_shot,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,83,80,1301
-classificacao_urgencia,few_shot,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,189,186,1687
-classificacao_urgencia,chain_of_thought,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,141,138,1524
-classificacao_urgencia,role_prompting,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,83,80,2754
-classificacao_urgencia,zero_shot,Adulto com dor lombar leve há uma semana sem outros sintomas,NÃO URGENTE,POUCO URGENTE,0.5,76,71,68965
-classificacao_urgencia,few_shot,Adulto com dor lombar leve há uma semana sem outros sintomas,POUCO URGENTE,POUCO URGENTE,1.0,183,177,1487
-classificacao_urgencia,chain_of_thought,Adulto com dor lombar leve há uma semana sem outros sintomas,NÃO URGENTE,POUCO URGENTE,0.5,134,129,1225
-classificacao_urgencia,role_prompting,Adulto com dor lombar leve há uma semana sem outros sintomas,NÃO URGENTE,POUCO URGENTE,0.5,76,71,1328
-classificacao_urgencia,zero_shot,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,76,71,1639
-classificacao_urgencia,few_shot,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,182,177,2048
-classificacao_urgencia,chain_of_thought,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,134,129,1209
-classificacao_urgencia,role_prompting,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,76,71,1243
-classificacao_urgencia,zero_shot,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,80,73,1681
-classificacao_urgencia,few_shot,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,186,179,1183
-classificacao_urgencia,chain_of_thought,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,138,131,1127
-classificacao_urgencia,role_prompting,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,80,73,1804
-extracao_dados_paciente,zero_shot,Dor abdominal intensa há 2 dias,"{""sintoma"":""dor abdominal"",""duracao"":""2 dias"",""intensidade"":""intensa""}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,79,57,3635
-extracao_dados_paciente,few_shot,Dor abdominal intensa há 2 dias,"{""sintoma"": ""dor abdominal"", ""duracao"": ""2 dias"", ""intensidade"": ""intensa""}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,220,193,4290
+classificacao_urgencia,zero_shot,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,84,77,1249
+classificacao_urgencia,few_shot,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,190,183,1017
+classificacao_urgencia,chain_of_thought,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,142,135,1228
+classificacao_urgencia,role_prompting,Paciente com dor no peito irradiando para o braço esquerdo e suor frio,EMERGÊNCIA,EMERGÊNCIA,1.0,84,77,1538
+classificacao_urgencia,zero_shot,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,83,80,1430
+classificacao_urgencia,few_shot,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,189,186,1752
+classificacao_urgencia,chain_of_thought,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,141,138,1604
+classificacao_urgencia,role_prompting,Criança de 5 anos com febre de 39 graus há 1 dia e vômitos,URGENTE,URGENTE,1.0,83,80,1863
+classificacao_urgencia,zero_shot,Adulto com dor lombar leve há uma semana sem outros sintomas,NÃO URGENTE,POUCO URGENTE,0.5,76,71,1045
+classificacao_urgencia,few_shot,Adulto com dor lombar leve há uma semana sem outros sintomas,POUCO URGENTE,POUCO URGENTE,1.0,183,177,1625
+classificacao_urgencia,chain_of_thought,Adulto com dor lombar leve há uma semana sem outros sintomas,POUCO URGENTE,POUCO URGENTE,1.0,135,129,1224
+classificacao_urgencia,role_prompting,Adulto com dor lombar leve há uma semana sem outros sintomas,NÃO URGENTE,POUCO URGENTE,0.5,76,71,1425
+classificacao_urgencia,zero_shot,Paciente solicita renovação de receita de medicamento controlado,POUCO URGENTE,NÃO URGENTE,0.5,77,71,1983
+classificacao_urgencia,few_shot,Paciente solicita renovação de receita de medicamento controlado,POUCO URGENTE,NÃO URGENTE,0.5,183,177,2314
+classificacao_urgencia,chain_of_thought,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,134,129,1740
+classificacao_urgencia,role_prompting,Paciente solicita renovação de receita de medicamento controlado,NÃO URGENTE,NÃO URGENTE,1.0,76,71,1052
+classificacao_urgencia,zero_shot,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,80,73,967
+classificacao_urgencia,few_shot,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,186,179,1152
+classificacao_urgencia,chain_of_thought,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,138,131,1332
+classificacao_urgencia,role_prompting,Idoso de 70 anos com confusão mental e queda súbita,EMERGÊNCIA,EMERGÊNCIA,1.0,80,73,1845
+extracao_dados_paciente,zero_shot,Dor abdominal intensa há 2 dias,"{""sintoma"":""Dor abdominal"",""duracao"":""2 dias"",""intensidade"":""intensa""}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,79,57,1955
+extracao_dados_paciente,few_shot,Dor abdominal intensa há 2 dias,"{""sintoma"": ""dor abdominal"", ""duracao"": ""2 dias"", ""intensidade"": ""intensa""}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,220,193,3161
 extracao_dados_paciente,chain_of_thought,Dor abdominal intensa há 2 dias,"{
-  ""sintoma"": ""dor abdominal"",
+  ""sintoma"": ""Dor abdominal"",
   ""duracao"": ""2 dias"",
   ""intensidade"": ""intensa""
-}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,140,108,1937
+}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,140,108,3304
 extracao_dados_paciente,role_prompting,Dor abdominal intensa há 2 dias,"{
   ""sintoma"": ""dor abdominal"",
   ""duracao"": ""2 dias"",
   ""intensidade"": ""intensa""
-}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,89,57,2020
-extracao_dados_paciente,zero_shot,Tontura leve desde esta manhã,"{
-  ""sintoma"": ""tontura"",
-  ""duracao"": ""desde esta manhã"",
-  ""intensidade"": ""leve""
-}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,94,58,2296
-extracao_dados_paciente,few_shot,Tontura leve desde esta manhã,"{""sintoma"": ""tontura"", ""duracao"": ""hoje"", ""intensidade"": ""leve""}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,221,194,2632
-extracao_dados_paciente,chain_of_thought,Tontura leve desde esta manhã,"{""sintoma"":""tontura"",""duracao"":""desde esta manhã"",""intensidade"":""leve""}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,135,109,1750
+}","{'sintoma': 'dor abdominal', 'duracao': '2 dias', 'intensidade': 'intensa'}",1.0,89,57,1710
+extracao_dados_paciente,zero_shot,Tontura leve desde esta manhã,"{""sintoma"":""tontura"",""duracao"":""desde esta manhã"",""intensidade"":""leve""}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,84,58,2367
+extracao_dados_paciente,few_shot,Tontura leve desde esta manhã,"{""sintoma"": ""tontura"", ""duracao"": ""1 dia"", ""intensidade"": ""leve""}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,221,194,2896
+extracao_dados_paciente,chain_of_thought,Tontura leve desde esta manhã,"{""sintoma"":""tontura"",""duracao"":""desde esta manhã"",""intensidade"":""leve""}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,135,109,2107
 extracao_dados_paciente,role_prompting,Tontura leve desde esta manhã,"{
   ""sintoma"": ""tontura"",
   ""duracao"": ""desde esta manhã"",
   ""intensidade"": ""leve""
-}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,94,58,2355
+}","{'sintoma': 'tontura', 'duracao': 'algumas horas', 'intensidade': 'leve'}",0.67,94,58,1597
 extracao_dados_paciente,zero_shot,Falta de ar moderada há 3 horas,"{
   ""sintoma"": ""Falta de ar"",
   ""duracao"": ""3 horas"",
   ""intensidade"": ""moderada""
-}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,93,59,2352
-extracao_dados_paciente,few_shot,Falta de ar moderada há 3 horas,"{""sintoma"": ""falta de ar"", ""duracao"": ""3 horas"", ""intensidade"": ""moderada""}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,224,195,2269
-extracao_dados_paciente,chain_of_thought,Falta de ar moderada há 3 horas,"{
-  ""sintoma"": ""Falta de ar"",
-  ""duracao"": ""3 horas"",
-  ""intensidade"": ""moderada""
-}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,144,110,2396
+}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,93,59,1854
+extracao_dados_paciente,few_shot,Falta de ar moderada há 3 horas,"{""sintoma"": ""falta de ar"", ""duracao"": ""3 horas"", ""intensidade"": ""moderada""}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,224,195,1666
+extracao_dados_paciente,chain_of_thought,Falta de ar moderada há 3 horas,"{""sintoma"":""Falta de ar"",""duracao"":""3 horas"",""intensidade"":""moderada""}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,134,110,1737
 extracao_dados_paciente,role_prompting,Falta de ar moderada há 3 horas,"{
   ""sintoma"": ""Falta de ar"",
   ""duracao"": ""3 horas"",
   ""intensidade"": ""moderada""
-}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,93,59,1681
+}","{'sintoma': 'falta de ar', 'duracao': '3 horas', 'intensidade': 'moderada'}",1.0,93,59,2450
 extracao_dados_paciente,zero_shot,Dor de garganta forte há 4 dias com dificuldade para engolir,"{
-  ""sintoma"": ""dor de garganta com dificuldade para engolir"",
-  ""duracao"": ""4 dias"",
-  ""intensidade"": ""forte""
-}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,108,66,4095
-extracao_dados_paciente,few_shot,Dor de garganta forte há 4 dias com dificuldade para engolir,"{""sintoma"": ""dor de garganta"", ""duracao"": ""4 dias"", ""intensidade"": ""forte""}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,231,202,2457
-extracao_dados_paciente,chain_of_thought,Dor de garganta forte há 4 dias com dificuldade para engolir,"{
   ""sintoma"": ""dor de garganta"",
   ""duracao"": ""4 dias"",
   ""intensidade"": ""forte""
-}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,151,117,1943
+}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,100,66,1951
+extracao_dados_paciente,few_shot,Dor de garganta forte há 4 dias com dificuldade para engolir,"{""sintoma"": ""dor de garganta"", ""duracao"": ""4 dias"", ""intensidade"": ""forte""}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,231,202,2483
+extracao_dados_paciente,chain_of_thought,Dor de garganta forte há 4 dias com dificuldade para engolir,"{
+  ""sintoma"": ""Dor de garganta"",
+  ""duracao"": ""4 dias"",
+  ""intensidade"": ""forte""
+}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,151,117,3453
 extracao_dados_paciente,role_prompting,Dor de garganta forte há 4 dias com dificuldade para engolir,"{
   ""sintoma"": ""dor de garganta"",
   ""duracao"": ""4 dias"",
   ""intensidade"": ""forte""
-}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,100,66,1637
+}","{'sintoma': 'dor de garganta', 'duracao': '4 dias', 'intensidade': 'forte'}",1.0,100,66,2046
 extracao_dados_paciente,zero_shot,Náusea fraca após o almoço,"{
   ""sintoma"": ""náusea"",
   ""duracao"": null,
   ""intensidade"": ""fraca""
-}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,91,60,3388
-extracao_dados_paciente,few_shot,Náusea fraca após o almoço,"{""sintoma"": ""náusea"", ""duracao"": ""1 dia"", ""intensidade"": ""fraca""}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,224,196,2731
-extracao_dados_paciente,chain_of_thought,Náusea fraca após o almoço,"{""sintoma"":""náusea"",""duracao"":"""",""intensidade"":""fraca""}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,131,111,3099
-extracao_dados_paciente,role_prompting,Náusea fraca após o almoço,"{
-  ""sintoma"": ""Náusea"",
-  ""duracao"": ""após o almoço"",
+}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,91,60,2046
+extracao_dados_paciente,few_shot,Náusea fraca após o almoço,"{""sintoma"": ""náusea"", ""duracao"": ""após o almoço"", ""intensidade"": ""fraca""}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,228,196,2159
+extracao_dados_paciente,chain_of_thought,Náusea fraca após o almoço,"{
+  ""sintoma"": ""náusea"",
+  ""duracao"": null,
   ""intensidade"": ""fraca""
-}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,97,60,2759
-sumarizacao_prontuario,zero_shot,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- Paciente: Maria, 62 anos, diabética tipo 2  
-- Queixa principal: tontura e visão turva há 1 hora  
-- Glicemia capilar: 320 mg/dL (hiperglicemia)  
-- Pressão arterial: 140/90 mmHg  
-- Necessário monitoramento glicêmico, avaliação neurológica e ajuste de terapia antidiabética.",Hiperglicemia em diabética idosa,0.75,190,86,2352
-sumarizacao_prontuario,few_shot,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","• Mulher, 62 anos, diabética  
-• Tontura e visão turva há 1 h  
-• Glicemia: 320 mg/dL  
-• PA: 140/90 mmHg  
-• Avaliar hiperglicemia aguda (cetoacidose), iniciar fluidos + insulina, monitorar cetonas e sinais vitais",Hiperglicemia em diabética idosa,0.75,332,243,5015
-sumarizacao_prontuario,chain_of_thought,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- Paciente: Maria, 62 anos, sexo feminino, diabética tipo 2.  
-- Queixa: tontura e visão turva, início há 1 hora.  
+}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,142,111,2447
+extracao_dados_paciente,role_prompting,Náusea fraca após o almoço,"{
+  ""sintoma"": ""náusea"",
+  ""duracao"": null,
+  ""intensidade"": ""fraca""
+}","{'sintoma': 'náusea', 'duracao': 'algumas horas', 'intensidade': 'fraca'}",0.67,91,60,2460
+sumarizacao_prontuario,zero_shot,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- Paciente: Maria, 62 anos, diabética conhecida.  
+- Queixa principal: tontura e visão turva há 1 hora.  
 - Glicemia capilar: 320 mg/dL (hiperglicemia).  
 - Pressão arterial: 140/90 mmHg.  
-- Prioridade: correção rápida da hiperglicemia e avaliação de causa neurológica/vascular.",Hiperglicemia em diabética idosa,0.75,258,148,1729
-sumarizacao_prontuario,role_prompting,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- **Paciente:** Maria, 62 anos, diabética tipo 2.  
+- Necessário: avaliação rápida, correção glicêmica (insulina IV/SC), monitoramento neurológico e hemodinâmico, investigar causa da hiperglicemia (infecção, medicação).",Hiperglicemia em diabética idosa,0.75,216,86,1939
+sumarizacao_prontuario,few_shot,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","• Mulher, 62 anos, diabética  
+• Tontura e visão turva há 1 h  
+• Glicemia capilar: 320 mg/dL  
+• Pressão arterial: 140/90 mmHg  
+• Suspeita de hiperglicemia descompensada – iniciar controle glicêmico e monitorar sinais neurológicos",Hiperglicemia em diabética idosa,0.75,332,243,2651
+sumarizacao_prontuario,chain_of_thought,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- Paciente: Maria, 62 anos, sexo feminino, história de diabetes mellitus.  
+- Queixa principal: tontura e visão turva iniciadas há 1 hora.  
+- Glicemia capilar: 320 mg/dL (hiperglicemia).  
+- Pressão arterial: 140/90 mmHg.  
+- Prioridade: controle glicêmico urgente + avaliação neurológica/vascular antes de alta.",Hiperglicemia em diabética idosa,0.5,255,148,1869
+sumarizacao_prontuario,role_prompting,"Paciente Maria, 62 anos, diabética, chegou com tontura e visão turva há 1h, glicemia 320mg/dl, PA 140/90","- **Paciente:** Maria, 62 anos, história de diabetes mellitus.  
 - **Queixa principal:** Tontura e visão turva há 1 hora.  
 - **Sinais vitais:** PA 140/90 mmHg; glicemia capilar 320 mg/dL.  
-- **Risco imediato:** Hiperglicemia com possível descompensação osmótica/cefálica; necessidade de avaliação neurológica e correção de glicemia.  
-- **Ações urgentes:** Monitorização contínua, reposição de fluidos, iniciar correção de glicemia (insulina IV conforme protocolo), solicitar exames laboratoriais (eletrólitos, cetonas, hemograma) e avaliação neurológica.",Hiperglicemia em diabética idosa,0.75,272,86,2468
+- **Risco imediato:** Hiperglicemia significativa em diabético → risco de descompensação hiperosmolar; sintoma neurológico (tontura/visão).  
+- **Triagem Manchester:** Categoria **Orange** (urgência muito alta – atendimento dentro de 10 min).",Hiperglicemia em diabética idosa,0.5,233,86,3460
 sumarizacao_prontuario,zero_shot,"Paciente Pedro, 8 anos, asmático, chegou com chiado no peito e dificuldade respiratória há 30min, SpO2 91%","- Paciente: Pedro, 8 anos, histórico de asma.  
-- Queixa: chiado no peito e dificuldade respiratória há 30 min.  
-- Sinais vitais: SpO₂ = 91 % (hipoxemia).  
-- Avaliação: provável exacerbação asmática aguda.  
-- Necessário: oxigênio suplementar, broncodilatador de curta ação e avaliação para possível terapia sistêmica.",Crise asmática grave em criança,0.4,198,80,1839
+- Queixa principal: chiado no peito e dificuldade respiratória há 30 min.  
+- Saturação de oxigênio: SpO₂ = 91 % (hipoxemia leve).  
+- Sinais vitais: frequência respiratória aumentada, esforço inspiratório perceptível.  
+- Necessário: avaliação rápida, suporte de oxigênio, broncodilatador de ação rápida e monitoramento contínuo.",Crise asmática grave em criança,0.2,213,80,2200
 sumarizacao_prontuario,few_shot,"Paciente Pedro, 8 anos, asmático, chegou com chiado no peito e dificuldade respiratória há 30min, SpO2 91%","• Menino, 8 anos, histórico de asma  
-• Chiado e dispneia há 30 min  
-• Saturação de O₂ ↓ 91 % (hipoxemia)  
-• Iniciar oxigênio suplementar + nebulização com broncodilatador  
-• Monitorar resposta, frequência respiratória e sinais de fadiga",Crise asmática grave em criança,0.2,324,237,3481
+• Chiado no peito e dispneia há 30 min  
+• Saturação de O₂ 91 % (hipoxemia)  
+• Avaliar necessidade de oxigênio e broncodilatador de curta ação  
+• Monitorar resposta ao tratamento e sinais de fadiga respiratória",Crise asmática grave em criança,0.2,328,237,6604
 sumarizacao_prontuario,chain_of_thought,"Paciente Pedro, 8 anos, asmático, chegou com chiado no peito e dificuldade respiratória há 30min, SpO2 91%","- Paciente: Pedro, 8 anos, sexo masculino, histórico de asma.  
-- Queixa: chiado no peito e dificuldade respiratória iniciados há 30 min.  
+- Queixa: chiado no peito e dificuldade respiratória há 30 min.  
 - Saturação de oxigênio: SpO₂ = 91 % (hipoxemia).  
-- Sinais vitais: taquipneia (não informada), uso de musculatura acessória provável.  
-- Prioridade: iniciar broncodilatador de curta ação + oxigênio suplementar; monitorar resposta e considerar escalonamento de terapia.",Crise asmática grave em criança,0.2,284,142,1944
+- Sinais vitais: (não informados) → monitorar frequência respiratória, frequência cardíaca e pressão arterial.  
+- Prioridade: iniciar suporte de oxigênio, avaliar necessidade de broncodilatador de curta ação e considerar escalonamento de terapia para crise asmática.",Crise asmática grave em criança,0.6,293,142,2047
 sumarizacao_prontuario,role_prompting,"Paciente Pedro, 8 anos, asmático, chegou com chiado no peito e dificuldade respiratória há 30min, SpO2 91%","- Paciente: Pedro, 8 anos, histórico de asma.  
-- Queixa principal: chiado no peito + dispneia há 30 min.  
-- Sinais vitais: SpO₂ = 91 % (oxigenação comprometida), frequência respiratória aumentada (não informada).  
-- Avaliação rápida (Manchester): categoria **Urgente (Amarelo)** – risco de deterioração respiratória.  
-- Plano imediato: oxigênio suplementar (≥ 2 L/min), nebulização com broncodilatador + corticoide, monitorização contínua e preparo para suporte ventilatório se necessário.",Crise asmática grave em criança,0.2,246,80,2149
-sumarizacao_prontuario,zero_shot,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- Paciente: Ana, 28 anos, gestante de 32 semanas de gestação.  
+- Queixa principal: chiado no peito + dificuldade respiratória há ≈ 30 min.  
+- Sinais vitais: SpO₂ = 91 % (oxigenação baixa), frequência respiratória aumentada (não informada).  
+- Classificação Manchester: **Urgente (Amarelo)** – risco de deterioração respiratória.  
+- Recomendações imediatas: iniciar oxigênio suplementar (≥ 2 L/min), nebulização com broncodilatador de curta ação + corticoide, monitorar SpO₂ e sinais vitais, preparar suporte avançado de via aérea se piorar.",Crise asmática grave em criança,0.2,271,80,2765
+sumarizacao_prontuario,zero_shot,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- Paciente: Ana, 28 anos, gestante de 32 semanas.  
 - Queixa principal: dor abdominal intensa + sangramento vaginal.  
-- Sinais vitais (a confirmar): pressão arterial, frequência cardíaca, saturação e avaliação fetal.  
-- Suspeita de complicação obstétrica: ruptura prematura de membranas, placenta prévia ou descolamento placentário.  
-- Medidas imediatas: monitorização materno‑fetal, acesso venoso, preparo para avaliação ultrassonográfica e possível intervenção obstétrica de urgência.",Emergência obstétrica,0.5,213,67,2868
+- Sinais vitais (a confirmar): pressão arterial, frequência cardíaca, saturação.  
+- Principais hipóteses diagnósticas: descolamento prematuro de placenta, trabalho de parto prematuro, ruptura uterina.  
+- Condutas urgentes: monitorização fetal, hemograma, tipagem sanguínea, iniciar suporte hemodinâmico e preparar equipe obstétrica para possível intervenção.",Emergência obstétrica,0.5,209,67,3586
 sumarizacao_prontuario,few_shot,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","• Mulher, 28 anos, gestante 32 semanas  
 • Dor abdominal intensa  
-• Sangramento vaginal  
-• Avaliar sinais de gravidade (PA, FC, volume de sangramento, contrações)  
-• Monitorar fetal (cardiotocografia) e preparar manejo obstétrico urgente",Emergência obstétrica,0.0,298,224,3491
-sumarizacao_prontuario,chain_of_thought,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- **Paciente:** Ana, 28 anos, gestante, 32 semanas de gestação.  
-- **Queixa principal:** Dor abdominal intensa de início súbito.  
-- **Sintoma associado:** Sangramento vaginal (quantidade não especificada).  
-- **Urgência:** Suspeita de descolamento prematuro de placenta ou trabalho de parto prematuro – requer avaliação obstétrica imediata e monitorização fetal.  
-- **Ações imediatas:** Monitorar sinais vitais, iniciar acesso venoso, coletar hemograma, tipagem e cruzamento sanguíneo, avaliar via ultrassonografia obstétrica e preparar para possível transferência para unidade de alto risco.",Emergência obstétrica,0.5,303,129,2546
-sumarizacao_prontuario,role_prompting,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- Paciente: Ana, 28 anos, gestante 32 semanas de gestação.  
-- Queixa principal: dor abdominal intensa + sangramento vaginal (quantidade não especificada).  
-- Sinais vitais (a confirmar): pressão arterial, frequência cardíaca, saturação e frequência uterina.  
-- Suspeita de complicação obstétrica (abruptio placentae ou trabalho de parto prematuro) – iniciar monitorização fetal e uterina.  
-- Ações imediatas: garantir via aérea e hemodinâmica, iniciar acesso venoso, solicitar hemograma, tipagem sanguínea + cross‑match, ultrassonografia obstétrica e preparar equipe de obstetrícia para possível parto de emergência.",Emergência obstétrica,1.0,250,67,3173
+• Sangramento vaginal (presença de fluxo)  
+• Suspeita de emergência obstétrica (ex.: descolamento de placenta ou placenta prévia)  
+• Avaliar sinais vitais, exame pélvico, ultrassom obstétrico e preparar para manejo de hemorragia/parto emergencial",Emergência obstétrica,1.0,326,224,2496
+sumarizacao_prontuario,chain_of_thought,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- Paciente: Ana, 28 anos, gestante de 32 semanas.  
+- Queixa principal: dor abdominal intensa + sangramento vaginal.  
+- Evolução: início súbito (tempo não especificado), dor contínua.  
+- Sinais de alerta: risco de descolamento prematuro de placenta ou trabalho de parto precoce.  
+- Necessário: avaliação obstétrica urgente, monitorização fetal, hemograma, tipagem sanguínea e preparo para possível intervenção.",Emergência obstétrica,0.5,257,129,1900
+sumarizacao_prontuario,role_prompting,"Paciente Ana, 28 anos, grávida 32 semanas, dor abdominal intensa e sangramento vaginal","- Paciente: Ana, 28 anos, gestante de 32 semanas de gestação.  
+- Queixa principal: dor abdominal intensa + sangramento vaginal.  
+- Sinais vitais (se disponíveis): monitorar pressão arterial, frequência cardíaca, saturação e temperatura.  
+- Suspeita de complicação obstétrica (ex.: descolamento prematuro de placenta ou trabalho de parto prematuro) – risco de hemorragia e comprometimento fetal.  
+- Prioridade Manchester: **Red (imediata)** – necessidade de avaliação obstétrica urgente e suporte hemodinâmico.",Emergência obstétrica,0.5,218,67,2660
 sumarizacao_prontuario,zero_shot,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","- Paciente: Carlos, 55 anos  
-- Queixa: fala arrastada e fraqueza no lado direito do corpo  
+- Queixa principal: fala arrastada e fraqueza no lado direito  
 - Início dos sintomas: há aproximadamente 2 horas  
-- Suspeita clínica: AVC isquêmico (possível hemiparesia esquerda)  
-- Prioridade: avaliação neurológica, NIHSS, TC de crânio sem contraste e considerar trombólise se elegível.",Suspeita de AVC,1.0,181,74,3175
+- Sinais neurológicos: hemiparesia direita, disartria; sem relato de dor de cabeça ou perda de consciência  
+- Suspeita clínica: AVC isquêmico agudo – necessidade de avaliação neuroimagiológica urgente e início de terapia trombolítica se elegível.",Suspeita de AVC,1.0,200,74,1842
 sumarizacao_prontuario,few_shot,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","• Homem, 55 anos, início súbito há 2 h  
 • Fala arrastada e fraqueza do lado direito do corpo  
-• Suspeita de AVC isquêmico (possível hemisfério esquerdo)  
-• Avaliar escala de AVC (NIHSS), pressão arterial e glicemia  
-• Iniciar protocolo de AVC: TC de crânio urgente, considerar trombólise se elegível",Suspeita de AVC,1.0,338,231,3584
-sumarizacao_prontuario,chain_of_thought,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","- 55 anos, masculino (Carlos)  
-- Chegou ao pronto‑socorro há 2 h com fala arrastada e fraqueza no lado direito do corpo  
-- Sinais neurológicos: hemiparesia direita (braço e perna), possível déficit sensorial; provável escala de Glasgow 14‑15  
-- Suspeita de AVC isquêmico agudo – tempo de início < 4,5 h, candidato à trombólise se exames permitirem  
-- Ações imediatas: monitorização de sinais vitais, glicemia capilar, TC de crânio sem contraste, painel de coagulação e iniciar protocolo de AVC.",Suspeita de AVC,1.0,305,136,3880
-sumarizacao_prontuario,role_prompting,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","- **Paciente:** Carlos, 55 anos, masculino  
-- **Queixa principal:** Fala arrastada + fraqueza no lado direito do corpo  
-- **Tempo de evolução:** 2 horas desde o início dos sintomas  
-- **Sinais de alerta:** Possível AVC agudo (déficit neurológico focal) – prioridade Manchester **Red** (imediata)  
-- **Ações iniciais:** Avaliar via ABC, monitorização contínua, oxigênio se SpO₂ < 94 %, acesso venoso, iniciar escala de AVC (NIHSS) e preparar para imagem cerebral urgente (TC/angiografia).",Suspeita de AVC,0.67,237,74,2970
-sumarizacao_prontuario,zero_shot,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","- Paciente: Lúcia, 40 anos.  
-- Alergia conhecida: dipirona (metamizol).  
-- Exposição: ingestão acidental de dipirona.  
-- Manifestação clínica: urticária generalizada (lesões eritematosas pruriginosas).  
-- Conduta recomendada: suspensão do agente, antihistamínico de primeira linha, monitorar sinais de anafilaxia e considerar adrenalina se houver progressão.",Reação alérgica grave,0.0,192,77,2406
+• Suspeita de AVC isquêmico agudo  
+• Avaliar NIHSS, pressão arterial e glicemia imediatamente  
+• Considerar TC de crânio e iniciar trombólise se elegível",Suspeita de AVC,1.0,319,231,2359
+sumarizacao_prontuario,chain_of_thought,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","- **Paciente:** Carlos, 55 anos, masculino  
+- **Queixa principal:** fala arrastada + fraqueza do lado direito do corpo  
+- **Tempo de evolução:** início há aproximadamente 2 horas  
+- **Sinais de alerta:** suspeita de AVC (sintomas focais neurológicos agudos)  
+- **Urgência:** necessidade de avaliação neurológica imediata, escala de AVC, TC de crânio e início de terapia trombolítica se indicado.",Suspeita de AVC,1.0,265,136,1962
+sumarizacao_prontuario,role_prompting,"Paciente Carlos, 55 anos, chegou com fala arrastada e fraqueza no lado direito do corpo há 2h","- Paciente: Carlos, 55 anos, masculino",Suspeita de AVC,0.0,88,74,4174
+sumarizacao_prontuario,zero_shot,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","- **Paciente:** Lúcia, 40 anos  
+- **Alergia conhecida:** Dipirona (metamizol)  
+- **Evento:** Ingestão acidental de dipirona hoje  
+- **Manifestação atual:** Urticária generalizada, sem comprometimento respiratório aparente  
+- **Conduta recomendada:** Monitorar sinais vitais, administrar antihistamínico (ex.: cetirizina) e, se houver piora ou sinais de anafilaxia, iniciar adrenalina IM e suporte avançado.",Reação alérgica grave,0.0,207,77,2177
 sumarizacao_prontuario,few_shot,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","• Mulher, 40 anos, alergia conhecida à dipirona  
 • Ingestão acidental de dipirona  
-• Urticária generalizada, sem sinais de comprometimento respiratório imediato  
-• Monitorar PA, frequência respiratória e sinais de anafilaxia  
-• Iniciar antihistamínico e ter adrenalina à mão caso haja piora",Reação alérgica grave,0.0,327,234,4560
-sumarizacao_prontuario,chain_of_thought,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","- Paciente: Lúcia, 40 anos, sexo feminino.  
-- Alergia conhecida: dipirona (reação prévia).  
-- Exposição: ingestão acidental de dipirona há <1 h.  
-- Sinais atuais: urticária generalizada, sem comprometimento respiratório aparente.  
-- Medidas urgentes: monitorar via aérea, administrar antihistamínico/epinefrina conforme protocolo de anafilaxia.",Reação alérgica grave,0.33,255,139,1841
+• Urticária generalizada, sem comprometimento respiratório aparente  
+• Administrar anti‑histamínico (ex.: difenidramina) e observar evolução  
+• Monitorar sinais de anafilaxia; ter epinefrina à mão caso haja piora",Reação alérgica grave,0.0,333,234,3559
+sumarizacao_prontuario,chain_of_thought,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","- **Paciente:** Lúcia, 40 anos, sexo feminino.  
+- **Histórico de alergia:** Hipersensibilidade conhecida à dipirona.  
+- **Evento atual:** Ingestão acidental de dipirona; início de urticária generalizada.  
+- **Sinais clínicos:** Lesões urticariformes disseminadas, sem relato de edema de lábios ou comprometimento respiratório até o momento.  
+- **Conduta urgente:** Monitorar vias aéreas; iniciar antihistamínico (cetirizina ou difenidramina) e, se houver piora ou sinais de anafilaxia, administrar epinefrina 0,3 mg IM; observar por pelo menos 2 h.",Reação alérgica grave,0.0,324,139,3987
 sumarizacao_prontuario,role_prompting,"Paciente Lucia, 40 anos, alérgica a dipirona, tomou o medicamento por engano e apresenta urticária generalizada","- Paciente: Lúcia, 40 anos; alergia conhecida à dipirona.  
 - Exposição: ingestão acidental de dipirona há ~30 min.  
-- Sinais clínicos: urticária maculopapular generalizada, prurido intenso; sem edema de vias aéreas nem comprometimento respiratório aparente.  
-- Avaliação inicial: PA 120/80 mmHg, FC 92 bpm, SpO₂ 98% em ar ambiente, sem sibilos ou dificuldade respiratória.  
-- Conduta imediata: administração de antihistamínico de ação rápida (ex.: cetirizina 10 mg VO) + observação por ≥1 h; preparo de adrenalina 0,3 mg IM caso evolua para anafilaxia; notificar equipe de alergologia.",Reação alérgica grave,0.0,292,77,3073
+- Sinais atuais: urticária maculopapular generalizada, sem edema de vias aéreas nem prurido intenso.  
+- VSR: PA 120/80 mmHg, FC 92 bpm, SpO₂ 98% em ar ambiente, sem dispneia.  
+- Medidas iniciais: suspensão do agente, administração IM de adrenalina 0,3 mg (1 mL 1:1000) + antihistamínico (cetirizina 10 mg PO) e observação por 2 h; monitorar sinais de anafilaxia.",Reação alérgica grave,0.0,277,77,3477
