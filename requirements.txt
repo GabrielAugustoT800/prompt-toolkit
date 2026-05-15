@@ -6,3 +6,4 @@ tiktoken
 pandas
 matplotlib
 ollama
+openpyxl

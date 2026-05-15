@@ -4,7 +4,7 @@ from src.llm_client import LLMClient
 from src.techniques import zero_shot, few_shot, chain_of_thought, role_prompting
 from src.tasks import tarefas
 from src.evaluator import contar_tokens, medir_acuracia, testar_temperatura
-from src.report import gerar_tabela, grafico_acuracia, grafico_custo, grafico_temperatura, recomendar
+from src.report import gerar_tabela, grafico_acuracia, grafico_custo, grafico_temperatura, recomendar, gerar_excel
 
 def carregar_json(path):
     with open(path, 'r', encoding= 'utf-8') as f:
@@ -68,6 +68,7 @@ def main():
     
     print('\n Gerando Relatório...')
     gerar_tabela(resultados)
+    gerar_excel(resultados)
     grafico_acuracia(resultados)
     grafico_custo(resultados)
     

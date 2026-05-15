@@ -69,3 +69,27 @@ def recomendar(resultados):
         melhor = df_tarefa.groupby('tecnica')['acuracia'].mean().idxmax()
         acuracia = df_tarefa.groupby('tecnica')["acuracia"].mean().max()
         print(f' {tarefa}: Melhor técnica -> {melhor} (Acurácia média: {acuracia:.0%})')
+
+def gerar_excel(resultados):
+    df = pd.DataFrame(resultados)
+    os.makedirs("output", exist_ok=True)
+
+    # Média de acurácia por tarefa e técnica
+    pivot_acuracia = df.groupby(["tarefa", "tecnica"])["acuracia"].mean().unstack()
+    pivot_acuracia = pivot_acuracia.applymap(lambda x: f"{x:.0%}")
+
+    # Média de tokens por tarefa e técnica
+    pivot_tokens = df.groupby(["tarefa", "tecnica"])["tokens_total"].mean().unstack()
+    pivot_tokens = pivot_tokens.applymap(lambda x: f"{x:.0f}")
+
+    # Média de tempo por tarefa e técnica
+    pivot_tempo = df.groupby(["tarefa", "tecnica"])["tempo_ms"].mean().unstack()
+    pivot_tempo = pivot_tempo.applymap(lambda x: f"{x:.0f}ms")
+
+    with pd.ExcelWriter("output/resultados.xlsx", engine="openpyxl") as writer:
+        pivot_acuracia.to_excel(writer, sheet_name="Acuracia")
+        pivot_tokens.to_excel(writer, sheet_name="Tokens")
+        pivot_tempo.to_excel(writer, sheet_name="Tempo")
+        df.to_excel(writer, sheet_name="Dados Completos", index=False)
+
+    print("✅ Excel salvo em output/resultados.xlsx!")
