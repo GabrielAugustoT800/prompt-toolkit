@@ -18,13 +18,13 @@ do domínio de saúde, compara resultados e recomenda a melhor abordagem.
 
 ## 🛠 Stack
 - Python 3.10+
-- Ollama API (local/gratuito)
-- tiktoken, pandas, matplotlib
+- Ollama Cloud API (gpt-oss:120b)
+- tiktoken, pandas, matplotlib, openpyxl
 
 ## 📋 Pré-requisitos
 - Python 3.10+
-- Ollama instalado e rodando
-- Modelo gpt-oss:120b baixado
+- Conta no Ollama (ollama.com)
+- Chave de API configurada no .env (OLLAMA_API_KEY)
 
 ## ⚙️ Instalação
 
@@ -45,10 +45,7 @@ cp .env.example .env
 
 ## 🚀 Executando
 
-Certifique-se que o Ollama está rodando:
-ollama serve
-
-Em outro terminal, execute o toolkit:
+Execute o toolkit:
 python main.py
 
 ## 📁 Estrutura
@@ -70,6 +67,7 @@ prompt-toolkit/
 └── output/
     ├── resultados.csv
     └── graficos/
+    └── resultados.xlsx
 
 ## 📊 Tarefas Implementadas
 - Classificação de urgência médica
